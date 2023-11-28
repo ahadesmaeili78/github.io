@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ترمینال وب</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .terminal {
+      border: 2px solid #333;
+      padding: 20px;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="terminal">
+    <input type="text" id="commandInput" placeholder="دستور خود را وارد کنید">
+    <button onclick="runCommand()">اجرا</button>
+    <div id="output"></div>
+  </div>
+
+  <script>
+    function runCommand() {
+      var command = document.getElementById('commandInput').value;
+      var output = document.getElementById('output');
+      // اینجا می‌توانید دستورات مورد نظر را اجرا کنید و خروجی آن‌ها را در ناحیه output نمایش دهید
+      // به عنوان مثال:
+      if (command === 'ls') {
+        output.innerHTML = 'فایل۱ فایل۲ فایل۳';
+      } else if (command === 'date') {
+        output.innerHTML = new Date().toLocaleString();
+      } else {
+        output.innerHTML = 'دستور نامعتبر';
+      }
+    }
+  </script>
+</body>
+</html>
+
